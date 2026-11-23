@@ -15,6 +15,7 @@ import {
 } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 import { useToast } from '../context/ToastContext';
+import { SpotFoodLogo } from './SpotFoodLogo';
 
 export const CartDrawer = ({ onProceedToCheckout }) => {
   const {
@@ -76,12 +77,12 @@ export const CartDrawer = ({ onProceedToCheckout }) => {
           
           {/* Header */}
           <div className="p-5 border-b border-white/10 flex items-center justify-between bg-charcoal-850">
-            <div className="flex items-center space-x-2.5">
-              <div className="p-2 rounded-xl bg-fiery/15 text-fiery border border-fiery/30">
-                <ShoppingBag className="w-5 h-5" />
-              </div>
+            <div className="flex items-center space-x-3">
+              <SpotFoodLogo size="xs" showText={false} />
               <div>
-                <h2 className="text-lg font-bold font-display text-white">Your Food Spot Cart</h2>
+                <h2 className="text-lg font-bold font-display text-white">
+                  Your <span className="text-metallic-gold">SPOT</span> <span className="text-neon-orange">FOOD</span> Cart
+                </h2>
                 <p className="text-xs text-gray-400">
                   {cartItems.length} {cartItems.length === 1 ? 'item' : 'items'} selected
                 </p>

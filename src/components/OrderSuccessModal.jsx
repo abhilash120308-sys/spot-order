@@ -11,6 +11,7 @@ import {
   ArrowRight
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
+import { SpotFoodLogo } from './SpotFoodLogo';
 
 export const OrderSuccessModal = ({ orderDetails, onClose }) => {
   if (!orderDetails) return null;
@@ -49,13 +50,14 @@ export const OrderSuccessModal = ({ orderDetails, onClose }) => {
             <X className="w-5 h-5" />
           </button>
 
-          <div className="w-16 h-16 rounded-full bg-emerald-500/20 border-2 border-emerald-500/60 flex items-center justify-center mx-auto mb-3 text-emerald-400 shadow-glow-gold animate-bounce">
-            <CheckCircle2 className="w-9 h-9" />
+          {/* Option 3 Luxury Neon Diner Badge in Header */}
+          <div className="flex justify-center mb-3">
+            <SpotFoodLogo size="lg" showText={false} />
           </div>
 
-          <span className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-fiery/15 text-fiery border border-fiery/30 text-[11px] font-bold uppercase tracking-wider mb-2">
-            <PartyPopper className="w-3.5 h-3.5 text-gold" />
-            <span>Cravings Spotted & Confirmed!</span>
+          <span className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-gradient-to-r from-fiery/20 to-gold/20 text-gold border border-gold/40 text-[11px] font-bold uppercase tracking-wider mb-2">
+            <PartyPopper className="w-3.5 h-3.5 text-fiery" />
+            <span><span className="text-metallic-gold">SPOT</span> <span className="text-neon-orange">FOOD</span> • Order Locked In</span>
           </span>
 
           <h2 className="text-2xl font-black font-display text-white">

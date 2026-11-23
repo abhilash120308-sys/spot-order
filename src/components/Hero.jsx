@@ -22,17 +22,22 @@ export const Hero = ({ onOpenReservation }) => {
           
           {/* Left Column: Headline, Tagline, CTAs & Stats */}
           <div className="lg:col-span-7 space-y-6 text-left">
-            {/* Voted #1 Badge */}
-            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-fiery/15 border border-fiery/30 text-fiery text-xs font-semibold tracking-wide backdrop-blur-md">
+            {/* Luxury Diner Vibe Badge */}
+            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-fiery/15 to-gold/15 border border-gold/30 text-xs font-semibold tracking-wide backdrop-blur-md">
               <Sparkles className="w-4 h-4 text-gold animate-spin" />
-              <span>CRAVINGS SPOTTED. HUNGER SOLVED.</span>
+              <span className="text-metallic-gold font-bold">LUXURY URBAN DINER</span>
+              <span className="text-gray-500">•</span>
+              <span className="text-neon-orange font-bold">CRAVINGS SOLVED</span>
             </div>
 
             {/* Main Headline */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-black font-display text-white tracking-tight leading-[1.1]">
               Cravings Hit Different At{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-fiery via-orange-400 to-gold">
-                Spot Food.
+              <span className="text-metallic-gold">
+                SPOT
+              </span>{' '}
+              <span className="text-neon-orange">
+                FOOD.
               </span>
             </h1>
 

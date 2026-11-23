@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { X, Lock, Mail, User, Phone, ShieldCheck, Sparkles, LogOut, CheckCircle2 } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import { useToast } from '../context/ToastContext';
+import { SpotFoodLogo } from './SpotFoodLogo';
 
 export const AuthModal = () => {
   const { user, login, register, logout, isAuthModalOpen, setIsAuthModalOpen } = useAuth();
@@ -81,13 +82,17 @@ export const AuthModal = () => {
         
         {/* Header */}
         <div className="p-5 border-b border-white/10 bg-charcoal-850 flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 rounded-lg bg-fiery/15 text-fiery flex items-center justify-center font-bold">
-              <Lock className="w-4 h-4" />
-            </div>
+          <div className="flex items-center space-x-3">
+            <SpotFoodLogo size="xs" showText={false} />
             <div>
               <h3 className="text-base font-bold font-display text-white">
-                {user ? 'Your Profile' : mode === 'login' ? 'Sign In to SpotFood' : 'Create an Account'}
+                {user ? (
+                  'Your Diner Profile'
+                ) : mode === 'login' ? (
+                  <>Sign In to <span className="text-metallic-gold">SPOT</span> <span className="text-neon-orange">FOOD</span></>
+                ) : (
+                  <>Create Account at <span className="text-metallic-gold">SPOT</span> <span className="text-neon-orange">FOOD</span></>
+                )}
               </h3>
               <p className="text-[11px] text-gray-400">
                 {user ? user.email : 'Order faster, save delivery spots & earn rewards'}

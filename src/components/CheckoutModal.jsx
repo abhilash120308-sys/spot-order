@@ -16,6 +16,7 @@ import { useCart } from '../context/CartContext';
 import { useAuth } from '../context/AuthContext';
 import { useToast } from '../context/ToastContext';
 import { api } from '../services/api';
+import { SpotFoodLogo } from './SpotFoodLogo';
 
 export const CheckoutModal = ({ isOpen, onClose, onOrderSuccess }) => {
   const { cartItems, grandTotal, subtotal, discount, deliveryFee, gst, clearCart, deliveryType } = useCart();
@@ -128,12 +129,12 @@ export const CheckoutModal = ({ isOpen, onClose, onOrderSuccess }) => {
         
         {/* Header */}
         <div className="p-5 border-b border-white/10 bg-charcoal-850 flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 rounded-lg bg-fiery/15 text-fiery flex items-center justify-center font-bold">
-              <MapPin className="w-4 h-4" />
-            </div>
+          <div className="flex items-center space-x-3">
+            <SpotFoodLogo size="xs" showText={false} />
             <div>
-              <h3 className="text-lg font-bold font-display text-white">Complete Your Order</h3>
+              <h3 className="text-lg font-bold font-display text-white">
+                Complete Your <span className="text-metallic-gold">SPOT</span> <span className="text-neon-orange">FOOD</span> Order
+              </h3>
               <p className="text-xs text-gray-400">
                 {deliveryType === 'delivery' ? 'Express Doorstep Delivery' : 'Quick Dine-in / Takeaway'}
               </p>

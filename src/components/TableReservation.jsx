@@ -15,6 +15,7 @@ import {
 import { useToast } from '../context/ToastContext';
 import { useAuth } from '../context/AuthContext';
 import { api } from '../services/api';
+import { SpotFoodLogo } from './SpotFoodLogo';
 
 export const TableReservation = () => {
   const { addToast } = useToast();
@@ -116,9 +117,9 @@ export const TableReservation = () => {
         <div className="max-w-4xl mx-auto">
           {bookingConfirmed ? (
             /* Booking Confirmation Card */
-            <div className="p-8 sm:p-10 rounded-3xl glass-card border border-emerald-500/40 text-center animate-scale-up">
-              <div className="w-16 h-16 rounded-full bg-emerald-500/20 border-2 border-emerald-500/60 flex items-center justify-center mx-auto mb-4 text-emerald-400">
-                <CheckCircle2 className="w-9 h-9" />
+            <div className="p-8 sm:p-10 rounded-3xl glass-card border border-gold/40 text-center animate-scale-up">
+              <div className="flex justify-center mb-4">
+                <SpotFoodLogo size="lg" showText={false} />
               </div>
               <span className="text-xs font-bold uppercase tracking-widest text-emerald-400">Reservation Confirmed</span>
               <h3 className="text-2xl sm:text-3xl font-black font-display text-white mt-1">

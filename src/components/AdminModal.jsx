@@ -14,6 +14,7 @@ import {
 } from 'lucide-react';
 import { api } from '../services/api';
 import { useToast } from '../context/ToastContext';
+import { SpotFoodLogo } from './SpotFoodLogo';
 
 export const AdminModal = ({ isOpen, onClose }) => {
   const { addToast } = useToast();
@@ -128,13 +129,13 @@ export const AdminModal = ({ isOpen, onClose }) => {
         {/* Header */}
         <div className="p-5 border-b border-white/10 bg-charcoal-850 flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-fiery to-gold text-charcoal-950 flex items-center justify-center font-black">
-              <LayoutDashboard className="w-5 h-5" />
-            </div>
+            <SpotFoodLogo size="sm" showText={false} />
             <div>
               <div className="flex items-center space-x-2">
-                <h3 className="text-lg font-bold font-display text-white">SpotFood Restaurant Console</h3>
-                <span className="px-2 py-0.5 rounded-md bg-gold/20 text-gold text-[10px] font-bold uppercase tracking-wider">
+                <h3 className="text-lg font-bold font-display text-white">
+                  <span className="text-metallic-gold">SPOT</span> <span className="text-neon-orange">FOOD</span> Restaurant Console
+                </h3>
+                <span className="px-2 py-0.5 rounded-md bg-gold/20 text-gold text-[10px] font-bold uppercase tracking-wider border border-gold/30">
                   Admin
                 </span>
               </div>

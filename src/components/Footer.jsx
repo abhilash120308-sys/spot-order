@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { 
-  Flame, 
   MapPin, 
   Phone, 
   Mail, 
@@ -12,6 +11,7 @@ import {
 } from 'lucide-react';
 import { InstagramIcon, FacebookIcon, TwitterIcon, YoutubeIcon } from './SocialIcons';
 import { useToast } from '../context/ToastContext';
+import { SpotFoodLogo } from './SpotFoodLogo';
 
 export const Footer = ({ onOpenReservation }) => {
   const { addToast } = useToast();
@@ -35,24 +35,14 @@ export const Footer = ({ onOpenReservation }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-white/10">
           
-          {/* Brand Column */}
+          {/* Brand Column: Option 3 Luxury Neon Urban Diner Logo */}
           <div className="lg:col-span-2 space-y-4">
-            <a href="#home" className="flex items-center space-x-2.5">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-fiery to-gold flex items-center justify-center shadow-glow-orange">
-                <Flame className="w-6 h-6 text-charcoal-950 fill-charcoal-950" />
-              </div>
-              <div className="flex flex-col">
-                <span className="text-2xl font-black font-display text-white tracking-tight">
-                  Spot<span className="text-fiery">Food</span>
-                </span>
-                <span className="text-[10px] uppercase tracking-widest text-gray-400 font-semibold -mt-1">
-                  Cravings Solved
-                </span>
-              </div>
+            <a href="#home" className="inline-block focus:outline-none transition-transform duration-300 hover:scale-105">
+              <SpotFoodLogo size="lg" />
             </a>
 
             <p className="text-xs sm:text-sm text-gray-400 max-w-sm leading-relaxed">
-              Spot Food is your premier culinary hotspot for mouth-watering Hyderabadi dum biryanis, 
+              <span className="text-metallic-gold font-bold">SPOT</span> <span className="text-neon-orange font-bold">FOOD</span> is your premier luxury urban dining destination for mouth-watering Hyderabadi dum biryanis, 
               sizzling charcoal starters, juicy smash burgers, and sweet decadence. 
               Always fresh, fiery, and delivered right to your spot.
             </p>
