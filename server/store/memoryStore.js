@@ -41,7 +41,7 @@ class MemoryStore {
           name: 'Priya Mukherjee',
           phone: '9812345678',
           email: 'priya@example.com',
-          address: '12 Rose Villa, Indiranagar',
+          address: '12 Rose Villa, Kukatpally, Hyderabad',
           landmark: 'Opp Cafe',
           instructions: 'Call upon arrival',
         },

@@ -24,13 +24,13 @@ export const VibeGallery = () => {
           </div>
 
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/_arun_471"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-4 md:mt-0 inline-flex items-center space-x-2 px-5 py-2.5 rounded-full bg-charcoal-800 hover:bg-charcoal-700 text-gold hover:text-white border border-gold/30 hover:border-gold text-xs font-bold transition-all"
           >
             <InstagramIcon className="w-4 h-4" />
-            <span>Follow @RajasFoodsOfficial</span>
+            <span>Follow @_arun_471</span>
           </a>
         </div>
 

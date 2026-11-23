@@ -47,43 +47,56 @@ export const Footer = ({ onOpenReservation }) => {
               Always fresh, fiery, and prepared to culinary perfection.
             </p>
 
-            {/* Social Icons */}
-            <div className="flex items-center space-x-3 pt-2">
+            {/* Social Icons & Instagram Handle */}
+            <div className="space-y-2.5 pt-2">
+              <div className="flex items-center space-x-3">
+                <a
+                  href="https://www.instagram.com/_arun_471"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-9 h-9 rounded-xl bg-charcoal-850 hover:bg-fiery hover:text-white border border-white/5 flex items-center justify-center text-gray-300 transition-colors"
+                  aria-label="Instagram @_arun_471"
+                >
+                  <InstagramIcon className="w-4 h-4" />
+                </a>
+                <a
+                  href="https://facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-9 h-9 rounded-xl bg-charcoal-850 hover:bg-fiery hover:text-white border border-white/5 flex items-center justify-center text-gray-300 transition-colors"
+                  aria-label="Facebook"
+                >
+                  <FacebookIcon className="w-4 h-4" />
+                </a>
+                <a
+                  href="https://twitter.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-9 h-9 rounded-xl bg-charcoal-850 hover:bg-fiery hover:text-white border border-white/5 flex items-center justify-center text-gray-300 transition-colors"
+                  aria-label="Twitter"
+                >
+                  <TwitterIcon className="w-4 h-4" />
+                </a>
+                <a
+                  href="https://youtube.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-9 h-9 rounded-xl bg-charcoal-850 hover:bg-fiery hover:text-white border border-white/5 flex items-center justify-center text-gray-300 transition-colors"
+                  aria-label="YouTube"
+                >
+                  <YoutubeIcon className="w-4 h-4" />
+                </a>
+              </div>
+              
+              {/* Instagram Handle Badge */}
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/_arun_471"
                 target="_blank"
-                rel="noreferrer"
-                className="w-9 h-9 rounded-xl bg-charcoal-850 hover:bg-fiery hover:text-white border border-white/5 flex items-center justify-center text-gray-300 transition-colors"
-                aria-label="Instagram"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-charcoal-850/80 hover:bg-charcoal-800 border border-gold/30 hover:border-gold text-xs text-gray-300 hover:text-gold transition-all duration-200 group"
               >
-                <InstagramIcon className="w-4 h-4" />
-              </a>
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noreferrer"
-                className="w-9 h-9 rounded-xl bg-charcoal-850 hover:bg-fiery hover:text-white border border-white/5 flex items-center justify-center text-gray-300 transition-colors"
-                aria-label="Facebook"
-              >
-                <FacebookIcon className="w-4 h-4" />
-              </a>
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noreferrer"
-                className="w-9 h-9 rounded-xl bg-charcoal-850 hover:bg-fiery hover:text-white border border-white/5 flex items-center justify-center text-gray-300 transition-colors"
-                aria-label="Twitter"
-              >
-                <TwitterIcon className="w-4 h-4" />
-              </a>
-              <a
-                href="https://youtube.com"
-                target="_blank"
-                rel="noreferrer"
-                className="w-9 h-9 rounded-xl bg-charcoal-850 hover:bg-fiery hover:text-white border border-white/5 flex items-center justify-center text-gray-300 transition-colors"
-                aria-label="YouTube"
-              >
-                <YoutubeIcon className="w-4 h-4" />
+                <InstagramIcon className="w-3.5 h-3.5 text-fiery group-hover:scale-110 transition-transform" />
+                <span className="text-[11px] font-semibold">@_arun_471</span>
               </a>
             </div>
           </div>
@@ -131,27 +144,27 @@ export const Footer = ({ onOpenReservation }) => {
               <div className="flex items-start space-x-2">
                 <Clock className="w-4 h-4 text-fiery shrink-0 mt-0.5" />
                 <div>
-                  <div className="text-white font-semibold">11:00 AM – 11:30 PM</div>
+                  <div className="text-white font-semibold">10:00 AM – 10:00 PM</div>
                   <div className="text-[11px] text-emerald-400">Open All 7 Days (Dine-in & Delivery)</div>
                 </div>
               </div>
 
               <div className="flex items-start space-x-2">
                 <MapPin className="w-4 h-4 text-gold shrink-0 mt-0.5" />
-                <span>42 Flame Boulevard, Indiranagar 100ft Road, Bangalore, KA 560038</span>
+                <span>Near Chintal Bus Stop, Hyderabad, Telangana</span>
               </div>
 
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4 text-fiery shrink-0" />
-                <a href="tel:+919876543210" className="text-white hover:text-fiery font-medium">
-                  +91 98765 43210
+                <a href="tel:+917801048676" className="text-white hover:text-fiery font-medium">
+                  +91 78010 48676
                 </a>
               </div>
 
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4 text-gold shrink-0" />
-                <a href="mailto:contact@rajafoods.in" className="hover:text-white">
-                  contact@rajafoods.in
+                <a href="mailto:abhilash.120308@gmail.com" className="hover:text-white font-medium">
+                  abhilash.120308@gmail.com
                 </a>
               </div>
             </div>

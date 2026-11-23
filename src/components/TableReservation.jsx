@@ -10,7 +10,8 @@ import {
   Mail, 
   MessageSquare,
   Wine,
-  ShieldCheck
+  ShieldCheck,
+  MapPin
 } from 'lucide-react';
 import { useToast } from '../context/ToastContext';
 import { useAuth } from '../context/AuthContext';
@@ -47,8 +48,8 @@ export const TableReservation = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const timeSlots = [
-    '12:30 PM', '01:30 PM', '02:30 PM', 
-    '07:00 PM', '07:30 PM', '08:15 PM', '09:00 PM', '09:45 PM'
+    '10:30 AM', '11:30 AM', '12:30 PM', '01:30 PM', 
+    '02:30 PM', '07:00 PM', '08:00 PM', '09:00 PM'
   ];
 
   const occasions = [
@@ -101,7 +102,7 @@ export const TableReservation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-12">
+        <div className="text-center max-w-2xl mx-auto mb-10">
           <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-gold/10 border border-gold/30 text-gold text-xs font-bold tracking-wider uppercase mb-3">
             <Calendar className="w-3.5 h-3.5" />
             <span>Table Reservation</span>
@@ -112,6 +113,25 @@ export const TableReservation = () => {
           <p className="mt-3 text-sm sm:text-base text-gray-400">
             Enjoy an unforgettable dining experience with glowing ambient lighting, sizzling live food, and handcrafted mocktails.
           </p>
+
+          {/* Quick Business Details & Contact Bar */}
+          <div className="mt-5 flex flex-wrap items-center justify-center gap-3 text-xs text-gray-300">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-charcoal-800/80 border border-white/10">
+              <Clock className="w-3.5 h-3.5 text-fiery" />
+              <span>10:00 AM – 10:00 PM (Daily)</span>
+            </div>
+            <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-charcoal-800/80 border border-white/10">
+              <MapPin className="w-3.5 h-3.5 text-gold" />
+              <span>Near Chintal Bus Stop, Hyderabad</span>
+            </div>
+            <a 
+              href="tel:+917801048676" 
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-charcoal-800/80 border border-gold/30 text-gold hover:text-white transition-colors"
+            >
+              <Phone className="w-3.5 h-3.5 text-fiery" />
+              <span>+91 78010 48676</span>
+            </a>
+          </div>
         </div>
 
         <div className="max-w-4xl mx-auto">
