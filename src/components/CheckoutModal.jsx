@@ -87,7 +87,7 @@ export const CheckoutModal = ({ isOpen, onClose, onOrderSuccess }) => {
       if (res && res.order) {
         orderDetails = res.order;
       } else {
-        const orderId = 'SF-' + Math.floor(10000 + Math.random() * 90000);
+        const orderId = 'RF-' + Math.floor(10000 + Math.random() * 90000);
         orderDetails = {
           orderId,
           ...payload,
@@ -102,7 +102,7 @@ export const CheckoutModal = ({ isOpen, onClose, onOrderSuccess }) => {
       onOrderSuccess(orderDetails);
       addToast(`🎉 Order ${orderDetails.orderId} placed successfully!`, 'success');
     }).catch(() => {
-      const orderId = 'SF-' + Math.floor(10000 + Math.random() * 90000);
+      const orderId = 'RF-' + Math.floor(10000 + Math.random() * 90000);
       const fallbackDetails = {
         orderId,
         ...payload,
@@ -133,7 +133,7 @@ export const CheckoutModal = ({ isOpen, onClose, onOrderSuccess }) => {
             <SpotFoodLogo size="xs" showText={false} />
             <div>
               <h3 className="text-lg font-bold font-display text-white">
-                Complete Your <span className="text-metallic-gold">SPOT</span> <span className="text-neon-orange">FOOD</span> Order
+                Complete Your <span className="text-metallic-gold">RAJA</span> <span className="text-neon-orange">FOODS</span> Order
               </h3>
               <p className="text-xs text-gray-400">
                 {deliveryType === 'delivery' ? 'Express Doorstep Delivery' : 'Quick Dine-in / Takeaway'}

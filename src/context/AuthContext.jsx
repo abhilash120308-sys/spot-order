@@ -7,7 +7,7 @@ const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(() => {
     try {
-      const saved = localStorage.getItem('spotfood_user');
+      const saved = localStorage.getItem('rajafoods_user') || localStorage.getItem('spotfood_user');
       return saved ? JSON.parse(saved) : null;
     } catch {
       return null;
@@ -19,8 +19,9 @@ export const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     if (user) {
-      localStorage.setItem('spotfood_user', JSON.stringify(user));
+      localStorage.setItem('rajafoods_user', JSON.stringify(user));
     } else {
+      localStorage.removeItem('rajafoods_user');
       localStorage.removeItem('spotfood_user');
     }
   }, [user]);
@@ -35,11 +36,11 @@ export const AuthProvider = ({ children }) => {
     }
 
     // Client-side fallback if backend server is not running
-    if (email === 'admin@spotfood.in' && password === 'admin123') {
+    if ((email === 'admin@rajafoods.in' || email === 'admin@spotfood.in') && password === 'admin123') {
       const adminUser = {
         id: 'usr-admin-local',
-        name: 'SpotFood Master Admin',
-        email: 'admin@spotfood.in',
+        name: "Raja's Foods Master Admin",
+        email: 'admin@rajafoods.in',
         role: 'admin',
         phone: '9876543210',
       };
@@ -48,11 +49,11 @@ export const AuthProvider = ({ children }) => {
       return { success: true, user: adminUser };
     }
 
-    if (email === 'customer@spotfood.in' && password === 'customer123') {
+    if ((email === 'customer@rajafoods.in' || email === 'customer@spotfood.in') && password === 'customer123') {
       const custUser = {
         id: 'usr-cust-local',
         name: 'Rahul Sharma',
-        email: 'customer@spotfood.in',
+        email: 'customer@rajafoods.in',
         role: 'customer',
         phone: '9988776655',
       };
@@ -102,6 +103,8 @@ export const AuthProvider = ({ children }) => {
   const logout = () => {
     setUser(null);
     api.setToken(null);
+    localStorage.removeItem('rajafoods_user');
+    localStorage.removeItem('rajafoods_token');
     localStorage.removeItem('spotfood_user');
     localStorage.removeItem('spotfood_token');
   };

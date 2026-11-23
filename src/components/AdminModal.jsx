@@ -29,7 +29,7 @@ export const AdminModal = ({ isOpen, onClose }) => {
 
   const [orders, setOrders] = useState([
     {
-      orderId: 'SF-10492',
+      orderId: 'RF-10492',
       customer: { name: 'Aarav Sharma', phone: '9876543210' },
       items: [{ name: 'Hyderabadi Chicken Dum Biryani', quantity: 2 }, { name: 'Crispy Wings', quantity: 1 }],
       grandTotal: 732,
@@ -37,7 +37,7 @@ export const AdminModal = ({ isOpen, onClose }) => {
       placedAt: '12:45 PM',
     },
     {
-      orderId: 'SF-10491',
+      orderId: 'RF-10491',
       customer: { name: 'Priya Mukherjee', phone: '9812345678' },
       items: [{ name: 'Paneer Tikka Platter', quantity: 1 }, { name: 'Sizzling Brownie', quantity: 2 }],
       grandTotal: 511,
@@ -45,7 +45,7 @@ export const AdminModal = ({ isOpen, onClose }) => {
       placedAt: '12:30 PM',
     },
     {
-      orderId: 'SF-10488',
+      orderId: 'RF-10488',
       customer: { name: 'Rohan Deshmukh', phone: '9876501234' },
       items: [{ name: 'Butter Chicken & Naan', quantity: 2 }],
       grandTotal: 658,
@@ -133,7 +133,7 @@ export const AdminModal = ({ isOpen, onClose }) => {
             <div>
               <div className="flex items-center space-x-2">
                 <h3 className="text-lg font-bold font-display text-white">
-                  <span className="text-metallic-gold">SPOT</span> <span className="text-neon-orange">FOOD</span> Restaurant Console
+                  <span className="text-metallic-gold">RAJA</span> <span className="text-neon-orange">FOODS</span> Restaurant Console
                 </h3>
                 <span className="px-2 py-0.5 rounded-md bg-gold/20 text-gold text-[10px] font-bold uppercase tracking-wider border border-gold/30">
                   Admin

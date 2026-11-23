@@ -1,7 +1,7 @@
 import jwt from 'jsonwebtoken';
 import { memoryStore } from '../store/memoryStore.js';
 
-const JWT_SECRET = process.env.JWT_SECRET || 'spotfood_super_secret_jwt_key_2026_cravings_solved';
+const JWT_SECRET = process.env.JWT_SECRET || 'rajafoods_super_secret_jwt_key_2026_cravings_solved';
 
 export const generateToken = (user) => {
   return jwt.sign(

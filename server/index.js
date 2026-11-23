@@ -25,7 +25,7 @@ connectDB();
 app.get('/api/health', (req, res) => {
   res.json({
     status: 'online',
-    app: 'SpotFood API Server',
+    app: "Raja's Foods API Server",
     time: new Date().toISOString(),
     version: '1.0.0',
   });

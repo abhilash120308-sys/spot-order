@@ -17,7 +17,7 @@ export const ReviewsSection = () => {
             Loved by 10,000+ Cravings
           </h2>
           <p className="mt-3 text-sm sm:text-base text-gray-400">
-            Hear what our regulars and verified food lovers have to say about dining and ordering from Spot Food.
+            Hear what our regulars and verified food lovers have to say about dining and ordering from Raja's Foods.
           </p>
         </div>
 

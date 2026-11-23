@@ -107,7 +107,7 @@ export const TableReservation = () => {
             <span>Table Reservation</span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-black font-display text-white tracking-tight">
-            Reserve Your Dining Spot
+            Reserve Your Dining Table
           </h2>
           <p className="mt-3 text-sm sm:text-base text-gray-400">
             Enjoy an unforgettable dining experience with glowing ambient lighting, sizzling live food, and handcrafted mocktails.

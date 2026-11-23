@@ -8,7 +8,7 @@ export const Hero = ({ onOpenReservation }) => {
       <div className="absolute inset-0 z-0">
         <img
           src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=2000&q=85"
-          alt="Spot Food Gourmet Dining"
+          alt="Raja's Foods Gourmet Dining"
           className="w-full h-full object-cover object-center scale-105 animate-pulse-slow filter brightness-40"
         />
         {/* Layered overlays for deep obsidian charcoal atmosphere */}
@@ -34,10 +34,10 @@ export const Hero = ({ onOpenReservation }) => {
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-black font-display text-white tracking-tight leading-[1.1]">
               Cravings Hit Different At{' '}
               <span className="text-metallic-gold">
-                SPOT
+                RAJA
               </span>{' '}
               <span className="text-neon-orange">
-                FOOD.
+                FOODS.
               </span>
             </h1>
 
@@ -106,7 +106,7 @@ export const Hero = ({ onOpenReservation }) => {
                 <div className="relative rounded-2xl overflow-hidden aspect-[4/3] group">
                   <img
                     src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=900&q=80"
-                    alt="SpotFood Signature Dum Biryani"
+                    alt="Raja's Foods Signature Dum Biryani"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950 via-charcoal-950/20 to-transparent" />
@@ -162,7 +162,7 @@ export const Hero = ({ onOpenReservation }) => {
                 <span className="text-lg">🔥</span>
                 <div className="text-left">
                   <div className="text-[10px] text-gray-400 uppercase font-semibold">Flat 50% Off</div>
-                  <div className="text-xs font-bold text-gold">Use Code: SPOT50</div>
+                  <div className="text-xs font-bold text-gold">Use Code: RAJA50</div>
                 </div>
               </div>
 

@@ -5,7 +5,7 @@ const CartContext = createContext();
 export const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState(() => {
     try {
-      const saved = localStorage.getItem('spotfood_cart');
+      const saved = localStorage.getItem('rajafoods_cart') || localStorage.getItem('spotfood_cart');
       return saved ? JSON.parse(saved) : [];
     } catch {
       return [];
@@ -19,7 +19,7 @@ export const CartProvider = ({ children }) => {
 
   useEffect(() => {
     try {
-      localStorage.setItem('spotfood_cart', JSON.stringify(cartItems));
+      localStorage.setItem('rajafoods_cart', JSON.stringify(cartItems));
     } catch (e) {
       console.error(e);
     }
@@ -94,7 +94,7 @@ export const CartProvider = ({ children }) => {
   // Coupons
   let discount = 0;
   if (appliedCoupon) {
-    if (appliedCoupon.code === 'SPOT50') {
+    if (appliedCoupon.code === 'RAJA50' || appliedCoupon.code === 'SPOT50') {
       discount = Math.min(Math.round(subtotal * 0.5), 150);
     } else if (appliedCoupon.code === 'TASTY20') {
       discount = Math.min(Math.round(subtotal * 0.2), 100);
@@ -107,18 +107,18 @@ export const CartProvider = ({ children }) => {
 
   const applyCoupon = (code) => {
     const trimmed = code.trim().toUpperCase();
-    if (trimmed === 'SPOT50') {
+    if (trimmed === 'RAJA50' || trimmed === 'SPOT50') {
       if (subtotal < 299) {
-        return { success: false, message: 'SPOT50 requires a minimum order of ₹299.' };
+        return { success: false, message: 'RAJA50 requires a minimum order of ₹299.' };
       }
-      setAppliedCoupon({ code: 'SPOT50', discountDesc: '50% OFF (Up to ₹150)' });
-      return { success: true, message: '🎉 Code SPOT50 applied! ₹150 saved.' };
+      setAppliedCoupon({ code: 'RAJA50', discountDesc: '50% OFF (Up to ₹150)' });
+      return { success: true, message: '🎉 Code RAJA50 applied! ₹150 saved.' };
     }
     if (trimmed === 'TASTY20') {
       setAppliedCoupon({ code: 'TASTY20', discountDesc: '20% OFF (Up to ₹100)' });
       return { success: true, message: '🎉 Code TASTY20 applied successfully!' };
     }
-    return { success: false, message: 'Invalid coupon code. Try SPOT50 or TASTY20!' };
+    return { success: false, message: 'Invalid coupon code. Try RAJA50 or TASTY20!' };
   };
 
   const removeCoupon = () => {

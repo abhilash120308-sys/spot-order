@@ -61,7 +61,7 @@ export const Navbar = ({ onOpenReservation }) => {
             <a
               href="#home"
               className="flex items-center focus:outline-none transition-transform duration-300 hover:scale-105"
-              aria-label="Spot Food Home"
+              aria-label="Raja's Foods Home"
             >
               <SpotFoodLogo size="md" />
             </a>

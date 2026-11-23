@@ -451,7 +451,7 @@ export const MENU_ITEMS = [
     spiceLevel: 'Medium',
     rating: 4.8,
     reviewsCount: 310,
-    description: 'Pan-roasted chicken tossed with roasted golden garlic cloves, green chillies, spring onions, and signature Spot sauce.',
+    description: 'Pan-roasted chicken tossed with roasted golden garlic cloves, green chillies, spring onions, and signature Raja special sauce.',
     image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80',
     popular: false,
     prepTime: '12 min',

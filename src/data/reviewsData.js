@@ -6,7 +6,7 @@ export const REVIEWS = [
     rating: 5,
     date: '3 days ago',
     avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&q=80',
-    comment: 'The Chicken Dum Biryani (Family Pack) here is hands down the best in the city. Perfectly balanced spices, meltingly tender meat, and that saffron aroma hits your soul. Spot Food truly solved our family weekend cravings!',
+    comment: 'The Chicken Dum Biryani (Family Pack) here is hands down the best in the city. Perfectly balanced spices, meltingly tender meat, and that saffron aroma hits your soul. Raja\'s Foods truly solved our family weekend cravings!',
     dishTried: 'Chicken Dum Biryani (Family Pack)',
     verified: true,
   },

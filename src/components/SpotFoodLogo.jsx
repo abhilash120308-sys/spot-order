@@ -146,16 +146,16 @@ export const SpotFoodLogo = ({
       {/* Brand Typography */}
       {showText && (
         <div className="flex flex-col text-left">
-          {/* Main Title: SPOT in Metallic Gold + FOOD in Glowing Neon Orange */}
+          {/* Main Title: RAJA in Metallic Gold + FOODS in Glowing Neon Orange */}
           <div className="flex items-center tracking-tight font-display font-black leading-none">
-            {/* Metallic Golden "SPOT" */}
+            {/* Metallic Golden "RAJA" */}
             <span className={`${current.fontSpot} font-black uppercase tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-[#FFF6BD] via-[#FFD54F] to-[#FFA000] drop-shadow-[0_2px_8px_rgba(255,193,7,0.35)]`}>
-              SPOT
+              RAJA
             </span>
 
-            {/* Glowing Neon Orange "FOOD" */}
+            {/* Glowing Neon Orange "FOODS" */}
             <span className={`${current.fontSpot} font-black uppercase tracking-wider ml-1 text-fiery drop-shadow-[0_0_12px_rgba(255,87,34,0.75)]`}>
-              FOOD
+              FOODS
             </span>
 
             {/* Pulsing Neon Indicator */}

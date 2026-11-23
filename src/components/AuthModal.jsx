@@ -89,13 +89,13 @@ export const AuthModal = () => {
                 {user ? (
                   'Your Diner Profile'
                 ) : mode === 'login' ? (
-                  <>Sign In to <span className="text-metallic-gold">SPOT</span> <span className="text-neon-orange">FOOD</span></>
+                  <>Sign In to <span className="text-metallic-gold">RAJA</span> <span className="text-neon-orange">FOODS</span></>
                 ) : (
-                  <>Create Account at <span className="text-metallic-gold">SPOT</span> <span className="text-neon-orange">FOOD</span></>
+                  <>Create Account at <span className="text-metallic-gold">RAJA</span> <span className="text-neon-orange">FOODS</span></>
                 )}
               </h3>
               <p className="text-[11px] text-gray-400">
-                {user ? user.email : 'Order faster, save delivery spots & earn rewards'}
+                {user ? user.email : 'Order faster, save delivery preferences & earn rewards'}
               </p>
             </div>
           </div>
@@ -257,14 +257,14 @@ export const AuthModal = () => {
               <div className="grid grid-cols-2 gap-2">
                 <button
                   type="button"
-                  onClick={() => handleQuickLogin('customer@spotfood.in', 'customer123')}
+                  onClick={() => handleQuickLogin('customer@rajafoods.in', 'customer123')}
                   className="p-2 rounded-xl bg-charcoal-800 hover:bg-charcoal-700 border border-white/5 text-[11px] font-semibold text-gray-300 hover:text-white transition-all text-center"
                 >
                   👤 Diner Account
                 </button>
                 <button
                   type="button"
-                  onClick={() => handleQuickLogin('admin@spotfood.in', 'admin123')}
+                  onClick={() => handleQuickLogin('admin@rajafoods.in', 'admin123')}
                   className="p-2 rounded-xl bg-charcoal-800 hover:bg-charcoal-700 border border-gold/30 text-[11px] font-semibold text-gold hover:text-white transition-all text-center"
                 >
                   👑 Admin Panel Access

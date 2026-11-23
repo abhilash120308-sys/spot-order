@@ -2,14 +2,15 @@ const API_BASE = import.meta.env.VITE_API_URL || '/api';
 
 class ApiService {
   constructor() {
-    this.token = localStorage.getItem('spotfood_token') || null;
+    this.token = localStorage.getItem('rajafoods_token') || localStorage.getItem('spotfood_token') || null;
   }
 
   setToken(token) {
     this.token = token;
     if (token) {
-      localStorage.setItem('spotfood_token', token);
+      localStorage.setItem('rajafoods_token', token);
     } else {
+      localStorage.removeItem('rajafoods_token');
       localStorage.removeItem('spotfood_token');
     }
   }

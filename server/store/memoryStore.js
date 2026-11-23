@@ -10,7 +10,7 @@ class MemoryStore {
     this.menu = [...initialMenuItems];
     this.orders = [
       {
-        orderId: 'SF-10492',
+        orderId: 'RF-10492',
         customer: {
           name: 'Aarav Sharma',
           phone: '9876543210',
@@ -36,7 +36,7 @@ class MemoryStore {
         createdAt: new Date(Date.now() - 15 * 60000).toISOString(),
       },
       {
-        orderId: 'SF-10491',
+        orderId: 'RF-10491',
         customer: {
           name: 'Priya Mukherjee',
           phone: '9812345678',
@@ -80,15 +80,27 @@ class MemoryStore {
     ];
 
     this.coupons = [
+      { code: 'RAJA50', discountPercent: 50, maxDiscount: 150, minOrder: 299, active: true },
       { code: 'SPOT50', discountPercent: 50, maxDiscount: 150, minOrder: 299, active: true },
       { code: 'TASTY20', discountPercent: 20, maxDiscount: 100, minOrder: 199, active: true },
     ];
 
-    // Seed default admin user (admin@spotfood.in / admin123)
+    // Seed default admin user (admin@rajafoods.in / admin123)
     const salt = bcrypt.genSaltSync(10);
     this.users.push({
       id: 'user-admin',
-      name: 'SpotFood Master Admin',
+      name: "Raja's Foods Master Admin",
+      email: 'admin@rajafoods.in',
+      phone: '9876543210',
+      passwordHash: bcrypt.hashSync('admin123', salt),
+      role: 'admin',
+      createdAt: new Date().toISOString(),
+    });
+
+    // Alias for legacy admin login
+    this.users.push({
+      id: 'user-admin-spot',
+      name: "Raja's Foods Master Admin",
       email: 'admin@spotfood.in',
       phone: '9876543210',
       passwordHash: bcrypt.hashSync('admin123', salt),
@@ -96,9 +108,20 @@ class MemoryStore {
       createdAt: new Date().toISOString(),
     });
 
-    // Seed sample customer user (customer@spotfood.in / customer123)
+    // Seed sample customer user (customer@rajafoods.in / customer123)
     this.users.push({
       id: 'user-demo',
+      name: 'Rahul Sharma',
+      email: 'customer@rajafoods.in',
+      phone: '9988776655',
+      passwordHash: bcrypt.hashSync('customer123', salt),
+      role: 'customer',
+      createdAt: new Date().toISOString(),
+    });
+
+    // Alias for legacy customer login
+    this.users.push({
+      id: 'user-demo-spot',
       name: 'Rahul Sharma',
       email: 'customer@spotfood.in',
       phone: '9988776655',
@@ -172,7 +195,7 @@ class MemoryStore {
   // --- Order operations ---
   createOrder(orderData) {
     const newOrder = {
-      orderId: 'SF-' + Math.floor(10000 + Math.random() * 90000),
+      orderId: 'RF-' + Math.floor(10000 + Math.random() * 90000),
       orderStatus: 'received',
       placedAt: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
       createdAt: new Date().toISOString(),

@@ -13,7 +13,7 @@ export const VibeGallery = () => {
           <div>
             <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-fiery/10 border border-fiery/30 text-fiery text-xs font-bold tracking-wider uppercase mb-3">
               <Camera className="w-3.5 h-3.5" />
-              <span>The SpotFood Vibe</span>
+              <span>The Raja's Foods Vibe</span>
             </div>
             <h2 className="text-3xl sm:text-5xl font-black font-display text-white tracking-tight">
               Aesthetic Moments & Sizzling Flames
@@ -30,7 +30,7 @@ export const VibeGallery = () => {
             className="mt-4 md:mt-0 inline-flex items-center space-x-2 px-5 py-2.5 rounded-full bg-charcoal-800 hover:bg-charcoal-700 text-gold hover:text-white border border-gold/30 hover:border-gold text-xs font-bold transition-all"
           >
             <InstagramIcon className="w-4 h-4" />
-            <span>Follow @SpotFoodOfficial</span>
+            <span>Follow @RajasFoodsOfficial</span>
           </a>
         </div>
 

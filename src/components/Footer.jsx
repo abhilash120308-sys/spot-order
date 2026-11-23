@@ -23,7 +23,7 @@ export const Footer = ({ onOpenReservation }) => {
       addToast('Please enter a valid email address.', 'error');
       return;
     }
-    addToast('🎉 Welcome to SpotFood Club! Check your inbox for 20% off.', 'success');
+    addToast('🎉 Welcome to Raja\'s Foods Club! Check your inbox for 20% off.', 'success');
     setEmail('');
   };
 
@@ -42,9 +42,9 @@ export const Footer = ({ onOpenReservation }) => {
             </a>
 
             <p className="text-xs sm:text-sm text-gray-400 max-w-sm leading-relaxed">
-              <span className="text-metallic-gold font-bold">SPOT</span> <span className="text-neon-orange font-bold">FOOD</span> is your premier luxury urban dining destination for mouth-watering Hyderabadi dum biryanis, 
-              sizzling charcoal starters, juicy smash burgers, and sweet decadence. 
-              Always fresh, fiery, and delivered right to your spot.
+              <span className="text-metallic-gold font-bold">RAJA</span> <span className="text-neon-orange font-bold">FOODS</span> is your premier luxury urban dining destination for mouth-watering Hyderabadi dum biryanis, 
+              sizzling charcoal starters, authentic mix ghee specialties, and decadent desserts. 
+              Always fresh, fiery, and prepared to culinary perfection.
             </p>
 
             {/* Social Icons */}
@@ -150,8 +150,8 @@ export const Footer = ({ onOpenReservation }) => {
 
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4 text-gold shrink-0" />
-                <a href="mailto:hello@spotfood.in" className="hover:text-white">
-                  hello@spotfood.in
+                <a href="mailto:contact@rajafoods.in" className="hover:text-white">
+                  contact@rajafoods.in
                 </a>
               </div>
             </div>
@@ -190,7 +190,7 @@ export const Footer = ({ onOpenReservation }) => {
 
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-4">
-          <p>© {new Date().getFullYear()} Spot Food Inc. All rights reserved. "Cravings Spotted. Hunger Solved."</p>
+          <p>© {new Date().getFullYear()} Raja's Foods Inc. All rights reserved. "Cravings Solved."</p>
           <div className="flex items-center space-x-4">
             <span className="hover:text-gray-400 cursor-pointer">Privacy Policy</span>
             <span>•</span>

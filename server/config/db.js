@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 
 export const connectDB = async () => {
-  const uri = process.env.MONGODB_URI || 'mongodb://localhost:27017/spotfood';
+  const uri = process.env.MONGODB_URI || 'mongodb://localhost:27017/rajafoods';
   try {
     const conn = await mongoose.connect(uri, {
       serverSelectionTimeoutMS: 2500, // Quick fail if local MongoDB daemon is not running

@@ -81,7 +81,7 @@ export const CartDrawer = ({ onProceedToCheckout }) => {
               <SpotFoodLogo size="xs" showText={false} />
               <div>
                 <h2 className="text-lg font-bold font-display text-white">
-                  Your <span className="text-metallic-gold">SPOT</span> <span className="text-neon-orange">FOOD</span> Cart
+                  Your <span className="text-metallic-gold">RAJA</span> <span className="text-neon-orange">FOODS</span> Cart
                 </h2>
                 <p className="text-xs text-gray-400">
                   {cartItems.length} {cartItems.length === 1 ? 'item' : 'items'} selected
@@ -135,7 +135,7 @@ export const CartDrawer = ({ onProceedToCheckout }) => {
                 </div>
                 <h3 className="text-base font-bold text-white">Your Cart is Empty</h3>
                 <p className="text-xs text-gray-400 mt-1 max-w-xs mx-auto">
-                  Looks like you haven't spotted your favorite cravings yet!
+                  Looks like you haven't chosen your favorite cravings yet!
                 </p>
                 <button
                   onClick={() => setIsCartOpen(false)}
@@ -231,7 +231,7 @@ export const CartDrawer = ({ onProceedToCheckout }) => {
                       type="text"
                       value={couponInput}
                       onChange={(e) => setCouponInput(e.target.value.toUpperCase())}
-                      placeholder="Enter promo code (e.g. SPOT50)"
+                      placeholder="Enter promo code (e.g. RAJA50)"
                       className="flex-1 bg-charcoal-950 border border-white/10 rounded-xl px-3.5 py-2 text-xs text-white placeholder-gray-500 focus:outline-none focus:border-fiery uppercase"
                     />
                     <button
@@ -245,10 +245,10 @@ export const CartDrawer = ({ onProceedToCheckout }) => {
                   {/* Preset quick codes */}
                   <div className="flex gap-2 mt-2">
                     <button
-                      onClick={() => handleApply('SPOT50')}
+                      onClick={() => handleApply('RAJA50')}
                       className="text-[10px] bg-fiery/10 border border-fiery/30 text-fiery px-2 py-0.5 rounded-md hover:bg-fiery/20 font-semibold"
                     >
-                      SPOT50 (50% Off)
+                      RAJA50 (50% Off)
                     </button>
                     <button
                       onClick={() => handleApply('TASTY20')}

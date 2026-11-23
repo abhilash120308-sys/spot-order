@@ -122,7 +122,7 @@ export const MenuSection = () => {
             )}
           </div>
           <h2 className="text-3xl sm:text-5xl font-black font-display text-white tracking-tight">
-            Explore Flavors at <span className="text-metallic-gold">SPOT</span> <span className="text-neon-orange">FOOD</span>
+            Explore Flavors at <span className="text-metallic-gold">RAJA</span> <span className="text-neon-orange">FOODS</span>
           </h2>
           <p className="mt-3 text-sm sm:text-base text-gray-400">
             From royal Hyderabadi Dum Biryanis and Special Mix Ghee feasts to sizzling southern starters, choose your preferred portion size and order fresh.

@@ -1,8 +1,8 @@
-# 🍽️ Spot Food – Full-Stack Food Discovery & Delivery Platform
+# 🍽️ Raja's Foods – Luxury Urban Diner & Delivery Platform
 
-> **"Cravings Spotted. Hunger Solved."**
+> **"Cravings Solved."**
 
-Spot Food is a full-stack food discovery, online food ordering, and table reservation platform with an obsidian dark-mode aesthetic (`#121212`), fiery orange (`#FF5722`) and gold (`#FFC107`) highlights, real-time cart calculations, JWT authentication, and an interactive **Admin Console**.
+Raja's Foods is a full-stack food discovery, online food ordering, and table reservation platform with an obsidian dark-mode aesthetic (`#121212`), fiery orange (`#FF5722`) and gold (`#FFC107`) highlights, real-time cart calculations, JWT authentication, and an interactive **Admin Console**.
 
 ---
 
@@ -47,8 +47,8 @@ npm run build
 
 | Role | Email | Password | Access Capabilities |
 |------|-------|----------|---------------------|
-| **Admin** | `admin@spotfood.in` | `admin123` | Full Admin Console, live order dispatching, status changer, revenue stats, table reservations |
-| **Diner** | `customer@spotfood.in` | `customer123` | Online ordering, cart checkout, table booking, profile tracking |
+| **Admin** | `admin@rajafoods.in` | `admin123` | Full Admin Console, live order dispatching, status changer, revenue stats, table reservations |
+| **Customer** | `customer@rajafoods.in` | `customer123` | Online ordering, cart checkout, table booking, profile tracking |
 
 *(You can also use the one-click quick login buttons inside the Sign In modal).*
 
@@ -69,7 +69,7 @@ npm run build
 | `PUT` | `/api/orders/:id/status` | Change order status | Admin |
 | `POST` | `/api/reservations` | Reserve a dining table | No |
 | `GET` | `/api/reservations` | List all table bookings | No |
-| `POST` | `/api/coupons/verify` | Validate `SPOT50` or `TASTY20` | No |
+| `POST` | `/api/coupons/verify` | Validate `RAJA50` or `TASTY20` | No |
 | `GET` | `/api/admin/stats` | Live revenue & order counts | Admin |
 
 ---
@@ -77,7 +77,7 @@ npm run build
 ## 📱 Core Highlights
 
 1. **Sticky Glassmorphic Navigation**:
-   - Brand logo with flame icon
+   - Brand logo with luxury metallic cloche and neon flame icon
    - Smooth-scrolling anchors (*Home, Menu, Specials, Reserve, Reviews, Contact*)
    - User account avatar and one-click Admin Console trigger
    - Live cart drawer trigger with counter badge
@@ -88,24 +88,24 @@ npm run build
    - Live trust metrics: 4.9/5 Rating, 25-Min Hot Delivery, 100% Fresh Daily
 
 3. **Chef's Specials & Trending Combos**:
-   - Curated feast boxes (*SpotFood Signature Feast*, *Royal Biryani Dum Bucket*, *Veg Royale Feast Box*)
+   - Curated feast boxes (*Raja's Foods Signature Feast*, *Royal Biryani Dum Bucket*, *Veg Royale Feast Box*)
    - Direct add-to-cart with celebratory toast
 
 4. **Categorized Menu & Instant Search**:
-   - Filter pills: Starters, Mains, Biryani & Bowls, Burgers & Wraps, Desserts, Mocktails
+   - Filter pills: Biryani Items, Special Mix Ghee Biryani, Dry Items
    - Dietary filter toggles: *All*, *Pure Veg*, *Non-Veg*
-   - Interactive quantity stepper (`[-] qty [+]`) directly on cards
+   - Interactive portion selectors (`Single / Regular / Family` and `Half / Full`) dynamically updating price
 
 5. **Slide-Out Cart & Checkout**:
    - Delivery vs. Dine-in / Takeaway toggle
-   - Coupon promo engine (`SPOT50` for 50% off, `TASTY20` for 20% off)
+   - Coupon promo engine (`RAJA50` for 50% off, `TASTY20` for 20% off)
    - Real-time billing: Subtotal, Discount, Delivery fee (Free > ₹499), 5% GST, Grand Total
    - UPI / Cards / Cash on Delivery payment simulation
 
 6. **Order Confirmation & Tracker**:
    - Confetti burst animation via `canvas-confetti`
-   - Generated Order ID (`SF-XXXXX`)
-   - 4-stage live order status (*Received ➔ In Kitchen ➔ On the Way ➔ At Spot*)
+   - Generated Order ID (`RF-XXXXX`)
+   - 4-stage live order status (*Received ➔ In Kitchen ➔ On the Way ➔ Delivered*)
 
 7. **Table Reservation System**:
    - Form with Date, Time Slot, Guests, Occasion, Special Requests

@@ -57,7 +57,7 @@ export const OrderSuccessModal = ({ orderDetails, onClose }) => {
 
           <span className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-gradient-to-r from-fiery/20 to-gold/20 text-gold border border-gold/40 text-[11px] font-bold uppercase tracking-wider mb-2">
             <PartyPopper className="w-3.5 h-3.5 text-fiery" />
-            <span><span className="text-metallic-gold">SPOT</span> <span className="text-neon-orange">FOOD</span> • Order Locked In</span>
+            <span><span className="text-metallic-gold">RAJA</span> <span className="text-neon-orange">FOODS</span> • Order Locked In</span>
           </span>
 
           <h2 className="text-2xl font-black font-display text-white">
@@ -105,7 +105,7 @@ export const OrderSuccessModal = ({ orderDetails, onClose }) => {
               <div className="w-8 h-8 rounded-full bg-charcoal-800 text-gray-400 font-bold flex items-center justify-center mx-auto text-xs border border-white/10">
                 ★
               </div>
-              <span className="text-[10px] text-gray-400 font-medium block mt-1">At Spot</span>
+              <span className="text-[10px] text-gray-400 font-medium block mt-1">At Raja's Foods</span>
             </div>
           </div>
         </div>
