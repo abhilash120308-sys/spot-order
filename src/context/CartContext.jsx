@@ -25,23 +25,37 @@ export const CartProvider = ({ children }) => {
     }
   }, [cartItems]);
 
-  const addToCart = (item, quantity = 1) => {
+  const addToCart = (item, quantity = 1, selectedPortion = null) => {
+    const portionName = selectedPortion ? selectedPortion.name : (item.portion || (item.portions && item.portions[0]?.name) || '');
+    const price = selectedPortion ? selectedPortion.price : (item.price || item.portions?.[0]?.price || 0);
+    const cartId = portionName ? `${item.id}-${portionName}` : item.id;
+
     setCartItems(prev => {
-      const existing = prev.find(i => i.id === item.id);
+      const existing = prev.find(i => (i.cartId || i.id) === cartId);
       if (existing) {
         return prev.map(i =>
-          i.id === item.id ? { ...i, quantity: i.quantity + quantity } : i
+          (i.cartId || i.id) === cartId ? { ...i, quantity: i.quantity + quantity } : i
         );
       }
-      return [...prev, { ...item, quantity }];
+      return [
+        ...prev,
+        {
+          ...item,
+          cartId,
+          portion: portionName,
+          price,
+          quantity,
+        }
+      ];
     });
   };
 
-  const updateQuantity = (itemId, delta) => {
+  const updateQuantity = (cartId, delta) => {
     setCartItems(prev => {
       return prev
         .map(i => {
-          if (i.id === itemId) {
+          const currentId = i.cartId || i.id;
+          if (currentId === cartId) {
             const newQty = i.quantity + delta;
             return newQty > 0 ? { ...i, quantity: newQty } : null;
           }
@@ -51,8 +65,8 @@ export const CartProvider = ({ children }) => {
     });
   };
 
-  const removeFromCart = (itemId) => {
-    setCartItems(prev => prev.filter(i => i.id !== itemId));
+  const removeFromCart = (cartId) => {
+    setCartItems(prev => prev.filter(i => (i.cartId || i.id) !== cartId));
   };
 
   const clearCart = () => {
@@ -61,9 +75,16 @@ export const CartProvider = ({ children }) => {
     setCouponCode('');
   };
 
-  const getItemQuantity = (itemId) => {
-    const found = cartItems.find(i => i.id === itemId);
-    return found ? found.quantity : 0;
+  const getItemQuantity = (itemId, portionName = null) => {
+    if (portionName) {
+      const targetCartId = `${itemId}-${portionName}`;
+      const found = cartItems.find(i => (i.cartId || i.id) === targetCartId);
+      return found ? found.quantity : 0;
+    }
+    // Total for this dish across all portions
+    return cartItems
+      .filter(i => i.id === itemId)
+      .reduce((acc, i) => acc + i.quantity, 0);
   };
 
   // Calculations
@@ -71,9 +92,6 @@ export const CartProvider = ({ children }) => {
   const subtotal = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
 
   // Coupons
-  // SPOT50: 50% off up to ₹150 (min order ₹299)
-  // TASTY20: 20% off up to ₹100
-  // FREECOOKIE: Free delivery
   let discount = 0;
   if (appliedCoupon) {
     if (appliedCoupon.code === 'SPOT50') {

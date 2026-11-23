@@ -157,63 +157,71 @@ export const CartDrawer = ({ onProceedToCheckout }) => {
                 </div>
 
                 <div className="space-y-3">
-                  {cartItems.map((item) => (
-                    <div
-                      key={item.id}
-                      className="p-3 rounded-2xl glass-card flex items-center justify-between gap-3 border border-white/5"
-                    >
-                      <img
-                        src={item.image}
-                        alt={item.name}
-                        className="w-14 h-14 rounded-xl object-cover shrink-0"
-                      />
-                      
-                      <div className="flex-1 min-w-0">
-                        <div className="flex items-center space-x-1.5">
-                          <span className={item.isVeg ? 'veg-indicator scale-75' : 'non-veg-indicator scale-75'} />
-                          <h4 className="text-xs sm:text-sm font-bold text-white truncate">
-                            {item.name}
-                          </h4>
-                        </div>
-                        <div className="text-xs font-black text-fiery mt-0.5">
-                          ₹{item.price * item.quantity}
-                          <span className="text-[10px] text-gray-400 font-normal ml-1">
-                            (₹{item.price} each)
-                          </span>
-                        </div>
-                      </div>
-
-                      {/* Stepper */}
-                      <div className="flex items-center space-x-1.5 bg-charcoal-800 rounded-lg p-1 border border-white/10 shrink-0">
-                        <button
-                          onClick={() => updateQuantity(item.id, -1)}
-                          className="p-1 text-gray-400 hover:text-white"
-                          aria-label="Decrease"
-                        >
-                          <Minus className="w-3 h-3" />
-                        </button>
-                        <span className="text-xs font-bold text-white px-1">
-                          {item.quantity}
-                        </span>
-                        <button
-                          onClick={() => updateQuantity(item.id, 1)}
-                          className="p-1 text-gold hover:text-white"
-                          aria-label="Increase"
-                        >
-                          <Plus className="w-3 h-3" />
-                        </button>
-                      </div>
-
-                      {/* Remove */}
-                      <button
-                        onClick={() => removeFromCart(item.id)}
-                        className="p-1.5 text-gray-500 hover:text-rose-400 transition-colors"
-                        aria-label="Remove item"
+                  {cartItems.map((item) => {
+                    const itemKey = item.cartId || item.id;
+                    return (
+                      <div
+                        key={itemKey}
+                        className="p-3 rounded-2xl glass-card flex items-center justify-between gap-3 border border-white/5"
                       >
-                        <Trash2 className="w-4 h-4" />
-                      </button>
-                    </div>
-                  ))}
+                        <img
+                          src={item.image}
+                          alt={item.name}
+                          className="w-14 h-14 rounded-xl object-cover shrink-0"
+                        />
+                        
+                        <div className="flex-1 min-w-0">
+                          <div className="flex items-center space-x-1.5 flex-wrap">
+                            <span className={item.isVeg ? 'veg-indicator scale-75' : 'non-veg-indicator scale-75'} />
+                            <h4 className="text-xs sm:text-sm font-bold text-white truncate">
+                              {item.name}
+                            </h4>
+                            {item.portion && (
+                              <span className="px-1.5 py-0.5 rounded-md bg-gold/15 text-gold border border-gold/30 text-[10px] font-bold">
+                                {item.portion}
+                              </span>
+                            )}
+                          </div>
+                          <div className="text-xs font-black text-fiery mt-0.5">
+                            ₹{item.price * item.quantity}
+                            <span className="text-[10px] text-gray-400 font-normal ml-1">
+                              (₹{item.price} each)
+                            </span>
+                          </div>
+                        </div>
+
+                        {/* Stepper */}
+                        <div className="flex items-center space-x-1.5 bg-charcoal-800 rounded-lg p-1 border border-white/10 shrink-0">
+                          <button
+                            onClick={() => updateQuantity(itemKey, -1)}
+                            className="p-1 text-gray-400 hover:text-white"
+                            aria-label="Decrease"
+                          >
+                            <Minus className="w-3 h-3" />
+                          </button>
+                          <span className="text-xs font-bold text-white px-1">
+                            {item.quantity}
+                          </span>
+                          <button
+                            onClick={() => updateQuantity(itemKey, 1)}
+                            className="p-1 text-gold hover:text-white"
+                            aria-label="Increase"
+                          >
+                            <Plus className="w-3 h-3" />
+                          </button>
+                        </div>
+
+                        {/* Remove */}
+                        <button
+                          onClick={() => removeFromCart(itemKey)}
+                          className="p-1.5 text-gray-500 hover:text-rose-400 transition-colors"
+                          aria-label="Remove item"
+                        >
+                          <Trash2 className="w-4 h-4" />
+                        </button>
+                      </div>
+                    );
+                  })}
                 </div>
 
                 {/* Promo Code Box */}

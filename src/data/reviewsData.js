@@ -6,8 +6,8 @@ export const REVIEWS = [
     rating: 5,
     date: '3 days ago',
     avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&q=80',
-    comment: 'The Hyderabadi Chicken Dum Biryani here is hands down the best in the city. Perfectly balanced spices, meltingly tender meat, and that saffron aroma hits your soul. Spot Food truly solved my midnight cravings!',
-    dishTried: 'Special Chicken Dum Biryani',
+    comment: 'The Chicken Dum Biryani (Family Pack) here is hands down the best in the city. Perfectly balanced spices, meltingly tender meat, and that saffron aroma hits your soul. Spot Food truly solved our family weekend cravings!',
+    dishTried: 'Chicken Dum Biryani (Family Pack)',
     verified: true,
   },
   {
@@ -17,8 +17,8 @@ export const REVIEWS = [
     rating: 5,
     date: '1 week ago',
     avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80',
-    comment: 'Ordered the Paneer Tikka Platter and Sizzling Brownie for a cozy weekend dinner. Delivery arrived in 22 minutes piping hot! The packaging was spotless and leak-proof. Highly recommended!',
-    dishTried: 'Paneer Tikka & Sizzling Brownie',
+    comment: 'Ordered the Special Mix Ghee Biryani and Chandramuki Chicken. The pure ghee aroma paired with spicy coastal flavors was out of this world! Delivered hot in 22 minutes.',
+    dishTried: 'Mixed Non Veg Biryani & Chandramuki Chicken',
     verified: true,
   },
   {
@@ -28,8 +28,8 @@ export const REVIEWS = [
     rating: 5,
     date: '2 weeks ago',
     avatar: 'https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=200&q=80',
-    comment: 'We reserved a table for an anniversary dinner. The dark ambient vibe, warm glowing lights, and attentive staff made it unforgettable. The Chilli Garlic Prawns and Double Smash Burger are world-class.',
-    dishTried: 'Chilli Garlic Prawns & Cocktails',
+    comment: 'We reserved a table for an anniversary dinner. The dark ambient neon vibe and attentive staff made it unforgettable. The Natu Kodi Biryani and Pepper Prawn fry are must-haves.',
+    dishTried: 'Natu Kodi Biryani & Pepper Prawn',
     verified: true,
   },
 ];

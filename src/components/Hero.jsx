@@ -132,17 +132,17 @@ export const Hero = ({ onOpenReservation }) => {
                 {/* Bottom interactive card bar */}
                 <div className="mt-4 flex items-center justify-between pt-2 border-t border-white/10">
                   <div className="flex flex-col">
-                    <span className="text-xs text-gray-400">Special Price</span>
+                    <span className="text-xs text-gray-400">Single • Regular • Family</span>
                     <div className="flex items-baseline space-x-2">
-                      <span className="text-2xl font-black text-white">₹299</span>
-                      <span className="text-xs text-gray-500 line-through">₹349</span>
+                      <span className="text-2xl font-black text-white">From ₹120</span>
+                      <span className="text-xs text-gold font-semibold">Portions</span>
                     </div>
                   </div>
                   <a
                     href="#menu"
-                    className="inline-flex items-center space-x-1.5 px-4 py-2 rounded-xl bg-fiery hover:bg-fiery-hover text-white text-xs font-bold shadow-glow-orange transition-all duration-200"
+                    className="inline-flex items-center space-x-1.5 px-4 py-2 rounded-xl bg-gradient-to-r from-fiery to-gold text-charcoal-950 text-xs font-black shadow-glow-orange transition-all duration-200 hover:scale-105"
                   >
-                    <span>Order Now</span>
+                    <span>Choose Size</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </a>
                 </div>
