@@ -12,7 +12,7 @@ import {
   Check, 
   X 
 } from 'lucide-react';
-import { CATEGORIES, MENU_ITEMS } from '../data/menuData';
+import { CATEGORIES, MENU_ITEMS, DEFAULT_FOOD_IMAGE } from '../data/menuData';
 import { useCart } from '../context/CartContext';
 import { useToast } from '../context/ToastContext';
 import { api } from '../services/api';
@@ -260,14 +260,20 @@ export const MenuSection = () => {
                   className="group rounded-2xl overflow-hidden glass-card hover:border-gold/40 transition-all duration-300 flex flex-col justify-between hover:shadow-card-hover"
                 >
                   {/* Dish Thumbnail */}
-                  <div className="relative h-48 w-full overflow-hidden bg-charcoal-850">
+                  <div className="relative aspect-[16/10] w-full overflow-hidden bg-charcoal-850">
                     <img
-                      src={item.image}
+                      src={item.image || DEFAULT_FOOD_IMAGE}
                       alt={item.name}
                       loading="lazy"
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-108"
+                      onError={(e) => {
+                        if (e.currentTarget.src !== DEFAULT_FOOD_IMAGE) {
+                          e.currentTarget.onerror = null;
+                          e.currentTarget.src = DEFAULT_FOOD_IMAGE;
+                        }
+                      }}
+                      className="w-full h-full aspect-[16/10] object-cover transition-transform duration-500 group-hover:scale-108"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-charcoal-900/95 via-transparent to-black/30" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-charcoal-900/95 via-transparent to-black/30 pointer-events-none" />
 
                     {/* Top Row Indicators: Veg/Non-veg & Spice Tag */}
                     <div className="absolute top-3 left-3 flex items-center space-x-2">

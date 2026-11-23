@@ -165,8 +165,14 @@ export const CartDrawer = ({ onProceedToCheckout }) => {
                         className="p-3 rounded-2xl glass-card flex items-center justify-between gap-3 border border-white/5"
                       >
                         <img
-                          src={item.image}
+                          src={item.image || 'https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=800&q=80'}
                           alt={item.name}
+                          onError={(e) => {
+                            if (e.currentTarget.src !== 'https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=800&q=80') {
+                              e.currentTarget.onerror = null;
+                              e.currentTarget.src = 'https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=800&q=80';
+                            }
+                          }}
                           className="w-14 h-14 rounded-xl object-cover shrink-0"
                         />
                         
